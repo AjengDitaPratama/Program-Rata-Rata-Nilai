@@ -1,0 +1,40 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package programrata.ratanilai;
+
+/**
+ *
+ * @author LENOVO
+ * Nama : Ajeng Dita Pratama
+ * Kelas : Sistem Informasi
+ * NIM : 23176009
+ * Deskripsi program : Program ini berisi program untuk menampilkan
+ * program rata-rata nilai
+ */
+import java.util.Scanner;
+public class ProgramRataRataNilai {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Masukkan Banyaknya Mahasiswa: ");
+        int jumlahMahasiswa = input.nextInt();
+
+        int[] nilai = new int[jumlahMahasiswa];
+        int totalNilai = 0;
+
+        for (int i = 0; i < jumlahMahasiswa; i++) {
+            System.out.print("Nilai Mahasiswa ke-" + (i + 1) + ": ");
+            nilai[i] = input.nextInt();
+            totalNilai += nilai[i];
+        }
+
+        double rataRata = (double) totalNilai / jumlahMahasiswa;
+        System.out.println("Maka, Rata-rata Nilainya adalah " + rataRata);
+        System.out.println("Developed by : Rizki Adam Kurniawan");
+
+        input.close();
+    }
+}
